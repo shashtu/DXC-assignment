@@ -49,13 +49,18 @@ console.log(formattedToday);
 
 
 // program 3
-const Names = ["Riya", "priya", "Supriya", "roja"];
+const Names = ["Riya", "priya", "Supriya", "Roja"];
 console.log(Names.sort());
 console.log(Names.reverse());
 
-const names = ["Riya", "priya", "Supriya", "roja"];
+const names = ["Riya", "priya", "Supriya", "Roja"];
 const decending = names.sort((Riya, Priya) => (Riya > Priya ? -1 : 1));
 console.log(decending);
+
+const name = ["Riya", "priya", "Supriya", "Roja"];
+const ascending = names.sort() 
+console.log(ascending);
+
 
 
 
