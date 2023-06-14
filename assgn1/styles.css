@@ -1,0 +1,35 @@
+a{
+    justify-content: center;
+    cursor: pointer;
+}
+img{
+display: inline-block;
+flex-wrap: wrap;
+flex-direction: row;
+width:260px;
+}
+.head{
+    display: inline;
+    width: 100%;
+    justify-content: fit;
+    height: 200px;
+}
+.link{
+    text-align: center;
+    row-gap: 2px;
+}
+
+.img-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 10px;
+}
+.img-grid div img{
+    width: 90%;
+    height: 250px;
+    object-fit: cover;
+    padding: 5px;
+    box-shadow: 0 0 1px 1px black;
+    border-collapse: collapse;
+    
+}
