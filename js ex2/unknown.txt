@@ -1,0 +1,200 @@
+2.Does JavaScript pass parameter by value or by reference?
+In JavaScript, primitive types (such as numbers, strings, booleans) are passed by value, 
+while objects (including arrays and functions) are passed by reference.
+
+
+3.Predict and Explain the Output
+
+function f(a,b,c) {
+    m=["1","2","3"];
+    a = 3;
+    b[0]= "X";
+    c.first = false;
+}
+var x = 4;
+var y = ["A", "B", "C"];
+var z = {first: true};
+f(x,y,z);
+console.log(x, y, z);
+
+function g(a){
+  a={first: true};
+  console.log(a);
+}
+
+g(z);
+console.log(z);
+
+output:-
+4 [ 'X', 'B', 'C' ] 
+{ first: false }
+{ first: true }
+{ first: false }
+
+The output of the function f(a,b,c) will be undefined because the function does not return anything. However, the function modifies the values of a, b, and c
+After that, the function f(x,y,z) is called with arguments x, y, and z. The values of these variables are:
+The variable x has a value of 4.
+The variable y is an array with three elements [“A”, “B”, “C”].
+The variable z is an object with a property named first which has a value of true.
+
+
+4. What is the difference between “undefined” and “not defined” in JavaScript?
+The main difference between "undefined" and "not defined" is that "undefined" is a value that can be assigned to a variable, while "not defined" indicates that a variable does not exist.
+
+5.What will be the output? Explain it.
+
+function foo1()
+{
+  return {
+      bar: "hello"
+  };
+}
+function foo2()
+{
+  return
+  {
+      bar: "hello"
+  };
+}
+console.log(foo1());
+console.log(foo2());
+
+o/p:-
+{ bar: 'hello' }
+undefined
+
+What will be the output? Also explain it.
+
+(function() {
+    console.log(1); 
+    setTimeout(function(){console.log(2)}, 1000); 
+    setTimeout(function(){console.log(3)}, 0); 
+    console.log(4);
+})();
+
+
+o/p:-1
+4
+3
+2
+
+8.Predict the output and explain.
+for (var i = 0; i < 5; i++) {
+	(function(x) {
+    	setTimeout(function() { console.log(x); },  1000 );
+    })(i);
+}
+
+o/p:-
+0
+1
+2
+3
+4
+
+* What will be the output? Explain
+
+var x= 5;
+function check(){
+  y = 10;
+  console.log(x);
+  var x =10;
+}
+function check2(){  
+  console.log(y);
+}
+check();
+check2();
+
+o/p:-undefined
+10
+This is because the variable x is declared inside the function check() using the keyword var. Therefore, it is a local variable and its scope is limited to the function block. 
+When the function check() is called, it first logs the value of x, which is undefined at that point. Then, it declares and initializes a new variable x with a value of 10
+
+
+
+
+Question: What is typeof []
+Answer: The typeof operator returns "object" because arrays are considered a special type of object in JavaScript.
+
+Question: What is typeof arguments
+Answer: The typeof operator returns "object" for the arguments
+
+Question: What is 2+true
+Answer: The result of 2 + true is 3
+
+Question: What is '6'+9
+Answer: The result of '6' + 9 is the string '69'
+
+Question: What is the value of 4+3+2+"1"
+Answer:   The value of 4 + 3 + 2 + "1" is the string "91"
+
+Question: What is the value of "1"+2+4
+Answer: the value of "1" + 2 + 4 is the string "124"
+ 
+Question: What is the value of -'34'+10
+Answer: the value of -'34' + 10 is -24
+
+Question: What is the value of +'dude'
+Answer:  
+
+Question: If you have var y = 1, x = y = typeof x; What is the value of x?
+Answer: the value of x is "undefined"
+
+Question: for var a = (2, 3, 5); what is the value of a?
+Answer:  the value of a will be 5
+
+Question: for var a = (1, 5 - 1) * 2 what is the value of a?
+Answer:the value of a will be 8
+
+Question: What is the value of !'bang'
+Answer:  the value of !'bang' is false
+
+Question: What is the value of parseFloat('12.3.4')
+Answer: 
+
+Question: What is the value of Math.max([2,3,4,5]);
+Answer: 5
+
+Question: What is the output of 3 instanceof Number
+Answer: the output is false
+
+Question: What is the output of null == undefined
+Answer: null == undefined evaluates to true
+
+Question:What is the value of !!function(){};
+Answer: the value of is true
+
+Question: What is the value of typeof bar
+Answer: If bar has not been declared or is not in the current scope, attempting to access it will result in a reference error.
+	If bar has been declared but has not been assigned a value, its type will be undefined
+
+Question: What is the value of typeof null
+Answer: 
+
+ Question: If var a = 2, b =3 what would be value of a && b
+Answer:  the value of a && b is 3
+
+Question: What would be consoled var foo = 'outside'; function logIt(){console.log(foo); var foo = 'inside';} logIt();
+Answer: 
+
+Question: What is -5%2
+Answer: -1
+
+Question: Why .1+.2 != .3
+Answer:
+
+Question: What is the output of 42..toString()
+Anwser: 42
+
+Question: What is the output of 4.2..toString
+Anwser: 4.2
+
+Question: What is the output of 42 . toString()
+Anwser: 42
+
+Question: What is the output of typeof(NaN)
+Anwser:number
+
+Question: What is the output of  2 in [1,2]
+Anwser:  true
